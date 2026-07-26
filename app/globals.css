@@ -272,29 +272,27 @@ body {
 /* ─── Responsive ───────────────────────────────────────────────────────────── */
 @media (max-width: 900px) {
   .app-header {
-    display: grid !important;
-    grid-template-areas: 
-      "logo actions"
-      "menu menu";
-    grid-template-columns: 1fr auto;
-    gap: 0.6rem;
-    padding: 0.8rem 1.2rem;
+    display: flex !important;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.8rem 1rem;
+    gap: 0.5rem;
   }
   .logo-text {
-    grid-area: logo;
-    justify-self: start;
+    flex-shrink: 0;
   }
   .header-actions {
-    grid-area: actions;
-    justify-self: end;
+    flex-shrink: 0;
   }
   .nav-menu {
-    grid-area: menu;
     display: flex !important;
-    gap: 1.25rem;
+    flex: 1;
+    min-width: 0;
+    margin: 0 0.75rem;
+    gap: 1.1rem;
     overflow-x: auto;
     white-space: nowrap;
-    padding-bottom: 2px;
+    padding-bottom: 0;
     scrollbar-width: none;
     -webkit-overflow-scrolling: touch;
   }
@@ -303,13 +301,15 @@ body {
   }
   .nav-link {
     font-size: 0.82rem;
+    flex: 0 0 auto;
+    padding: 0.2rem 0.4rem;
   }
 
   .hero-section { 
     grid-template-columns:1fr; 
     text-align:center; 
-    height: calc(100vh - 90px);
-    height: calc(100dvh - 90px);
+    height: calc(100vh - 65px);
+    height: calc(100dvh - 65px);
     padding-top: 1rem; 
     padding-bottom: 1rem; 
     display: flex;
@@ -336,12 +336,12 @@ body {
 }
 @media (max-width: 600px) {
   .app-header {
-    padding: 0.6rem 1rem;
-    gap: 0.5rem;
+    padding: 0.6rem 0.8rem;
+    gap: 0.4rem;
   }
   .hero-section {
-    height: calc(100vh - 85px);
-    height: calc(100dvh - 85px);
+    height: calc(100vh - 60px);
+    height: calc(100dvh - 60px);
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
   }
