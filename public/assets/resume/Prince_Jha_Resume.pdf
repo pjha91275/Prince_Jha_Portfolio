@@ -1,0 +1,34 @@
+PRINCE JHA - COMPUTER ENGINEERING STUDENT PORTFOLIO RESUME PLACEHOLDER
+======================================================================
+This is a simulated PDF placeholder for Prince Jha's resume, developed for the
+Introduction to Intelligent Systems (IIS) Lab Experiment 1.
+
+Personal Details:
+- Name: Prince Jha
+- College: Thakur College of Engineering and Technology (TCET), Mumbai
+- Course: Bachelor of Engineering in Computer Engineering (3rd Year)
+- Email: princejha@gmail.com
+- Phone: +91 98765 43210
+- CGPI: 9.25
+
+Skills:
+- C++, Java, JavaScript, Python, C
+- HTML5, CSS3, Vanilla JS
+- Flask Backend, REST APIs
+- MongoDB, MySQL
+- Git, GitHub, VS Code, Postman, Linux
+
+Projects:
+- SkillBridge (Placement Prep Dashboard)
+- Quickzy (Quick Commerce Storefront)
+- Blog Management System (CRUD with Node/Express)
+- EV Charging Platform (Discovery & Reservation engine)
+
+Achievements:
+- 100+ DSA Problems Solved
+- 30+ GitHub Repositories
+- 550+ Commits
+- 10+ Hackathons
+- Top 8 Finalist at IEEE Mega Project
+
+Please replace this file with your actual 'Prince_Jha_Resume.pdf'!
