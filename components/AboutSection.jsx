@@ -9,6 +9,13 @@ export default function AboutSection() {
         <h2 className="section-title">About Me</h2>
       </div>
       <div className="about-grid">
+        <div className="about-card about-image-card glass-card">
+          <img 
+            src="/assets/profile.jpg" 
+            alt="Prince Jha" 
+            className="about-profile-image" 
+          />
+        </div>
         <div className="about-card main-about glass-card">
           <p>
             I am currently a <strong>3rd Year Computer Engineering Student</strong> pursuing my

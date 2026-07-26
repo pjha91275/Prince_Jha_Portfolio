@@ -6,6 +6,11 @@ export const metadata = {
     "Personal Portfolio of Prince Jha — Computer Engineering student at TCET Mumbai and Full Stack Web Developer, featuring an integrated AI Chatbot powered by Google Gemini API.",
   keywords: ["Prince Jha", "Portfolio", "Full Stack Developer", "React", "Next.js", "TCET"],
   authors: [{ name: "Prince Jha" }],
+  icons: {
+    icon: "/icon.png?v=3",
+    shortcut: "/icon.png?v=3",
+    apple: "/icon.png?v=3",
+  },
 };
 
 export default function RootLayout({ children }) {

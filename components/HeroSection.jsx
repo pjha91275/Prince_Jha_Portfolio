@@ -12,7 +12,7 @@ export default function HeroSection() {
           <span className="subtitle-separator">•</span>
           <span className="subtitle-item">Full Stack Web Developer</span>
           <span className="subtitle-separator">•</span>
-          <span className="subtitle-item">AI &amp; Software Enthusiast</span>
+          <span className="subtitle-item">Aspiring Software Engineer</span>
         </div>
         <p className="hero-bio">
           I am a passionate Computer Engineering student focused on Full Stack Web Development,
@@ -40,7 +40,13 @@ export default function HeroSection() {
       </div>
       <div className="hero-graphic">
         <div className="graphic-circle">
-          <div className="inner-core">🤖</div>
+          <div className="inner-core">
+            <img 
+              src="/assets/profile.jpg" 
+              alt="Prince Jha" 
+              className="hero-profile-image" 
+            />
+          </div>
           <div className="orbital orbital-1" />
           <div className="orbital orbital-2" />
         </div>
