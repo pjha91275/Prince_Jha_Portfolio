@@ -271,17 +271,88 @@ body {
 
 /* ─── Responsive ───────────────────────────────────────────────────────────── */
 @media (max-width: 900px) {
-  .hero-section { grid-template-columns:1fr; text-align:center; }
-  .hero-graphic { display:none; }
+  .app-header {
+    display: grid !important;
+    grid-template-areas: 
+      "logo actions"
+      "menu menu";
+    grid-template-columns: 1fr auto;
+    gap: 0.6rem;
+    padding: 0.8rem 1.2rem;
+  }
+  .logo-text {
+    grid-area: logo;
+    justify-self: start;
+  }
+  .header-actions {
+    grid-area: actions;
+    justify-self: end;
+  }
+  .nav-menu {
+    grid-area: menu;
+    display: flex !important;
+    gap: 1.25rem;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding-bottom: 2px;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+  }
+  .nav-menu::-webkit-scrollbar {
+    display: none;
+  }
+  .nav-link {
+    font-size: 0.82rem;
+  }
+
+  .hero-section { 
+    grid-template-columns:1fr; 
+    text-align:center; 
+    height: calc(100vh - 90px);
+    height: calc(100dvh - 90px);
+    padding-top: 1rem; 
+    padding-bottom: 1rem; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+  .hero-content { order: 2; }
+  .hero-graphic { 
+    display:flex !important; 
+    order: 1; 
+    margin-top: -3.5rem;
+    margin-bottom: -2.5rem; 
+    transform: scale(0.7); 
+    transform-origin: center; 
+    height: 420px; 
+  }
   .hero-ctas { justify-content:center; }
   .about-grid { grid-template-columns:1fr; }
   .contact-grid { grid-template-columns:1fr; }
   .achievements-grid { grid-template-columns:repeat(2,1fr); }
-  .nav-menu { display:none; }
   .chatbot-window { width:340px; right:-10px; }
 }
 @media (max-width: 600px) {
-  .app-header { padding:0.8rem 1rem; }
+  .app-header {
+    padding: 0.6rem 1rem;
+    gap: 0.5rem;
+  }
+  .hero-section {
+    height: calc(100vh - 85px);
+    height: calc(100dvh - 85px);
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+  .hero-graphic { 
+    transform: scale(0.55); 
+    height: 330px; 
+    margin-top: -5.5rem;
+    margin-bottom: -4.5rem; 
+  }
+  .hero-content h1 { font-size: 2.2rem; margin: 0.25rem 0; }
+  .hero-content p { font-size: 0.85rem; line-height: 1.45; margin-bottom: 0.75rem; }
   .portfolio-container { padding:0 1rem; }
   .section { padding:3rem 0; }
   .form-row { grid-template-columns:1fr; }
