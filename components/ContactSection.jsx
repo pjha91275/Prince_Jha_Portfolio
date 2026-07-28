@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { Mail, Phone, Globe, GitFork, Link2 } from "lucide-react";
 import { submitContactForm } from "@/lib/api";
+import ScrollReveal from "./ScrollReveal";
 
 export default function ContactSection({ backendConnected }) {
   const [form, setForm] = useState({ name: "", email: "", subject: "", message: "" });
@@ -30,11 +31,12 @@ export default function ContactSection({ backendConnected }) {
 
   return (
     <section className="section contact-section" id="contact">
-      <div className="section-header">
-        <span className="section-tag">Get In Touch</span>
-        <h2 className="section-title">Contact</h2>
-      </div>
-      <div className="contact-grid">
+      <ScrollReveal>
+        <div className="section-header">
+          <span className="section-tag">Get In Touch</span>
+          <h2 className="section-title">Contact</h2>
+        </div>
+        <div className="contact-grid">
         <div className="contact-info glass-card">
           <h3>Contact Information</h3>
           <p>Feel free to reach out for research discussions, freelance collaborations, or job opportunities.</p>
@@ -90,6 +92,7 @@ export default function ContactSection({ backendConnected }) {
           </form>
         </div>
       </div>
+      </ScrollReveal>
     </section>
   );
 }

@@ -11,6 +11,7 @@ import AchievementsSection from "@/components/AchievementsSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 import ChatbotWidget from "@/components/ChatbotWidget";
+import SpaceBackground from "@/components/SpaceBackground";
 
 export default function HomePage() {
   const [backendStatus, setBackendStatus] = useState({
@@ -34,10 +35,7 @@ export default function HomePage() {
 
   return (
     <>
-      <div className="glass-bg" />
-      <div className="glow-dots" />
-      <div className="orb orb-1" />
-      <div className="orb orb-2" />
+      <SpaceBackground />
 
       <Header backendStatus={backendStatus} />
 

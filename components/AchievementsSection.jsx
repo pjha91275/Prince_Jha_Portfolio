@@ -1,70 +1,106 @@
 "use client";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, useCallback } from "react";
 import { Code, FolderGit2, GitCommit, Trophy, Award } from "lucide-react";
+import { portfolioData } from "@/lib/portfolioData";
+import ScrollReveal from "./ScrollReveal";
 
-const counters = [
-  { icon: Code, target: 100, label: "DSA Problems Solved" },
-  { icon: FolderGit2, target: 30, label: "GitHub Repositories" },
-  { icon: GitCommit, target: 550, label: "GitHub Commits" },
-  { icon: Trophy, target: 10, label: "Hackathons Participated" },
-];
-
-function AnimatedCounter({ target }) {
+function AnimatedCounter({ target, shouldAnimate }) {
   const [count, setCount] = useState(0);
-  const ref = useRef(null);
-  const animated = useRef(false);
+  const animFrameRef = useRef(null);
+
+  useEffect(() => {
+    if (!shouldAnimate) {
+      setCount(0);
+      return;
+    }
+
+    // Cancel any previous animation
+    if (animFrameRef.current) cancelAnimationFrame(animFrameRef.current);
+
+    let startTime = null;
+    const duration = 1200; // 1.2 seconds
+
+    const step = (timestamp) => {
+      if (!startTime) startTime = timestamp;
+      const elapsed = timestamp - startTime;
+      const progress = Math.min(elapsed / duration, 1);
+      // Ease-out cubic for a natural deceleration
+      const eased = 1 - Math.pow(1 - progress, 3);
+      setCount(Math.ceil(eased * target));
+      if (progress < 1) {
+        animFrameRef.current = requestAnimationFrame(step);
+      } else {
+        setCount(target);
+      }
+    };
+
+    animFrameRef.current = requestAnimationFrame(step);
+
+    return () => {
+      if (animFrameRef.current) cancelAnimationFrame(animFrameRef.current);
+    };
+  }, [shouldAnimate, target]);
+
+  return <span className="counter-num">{count}</span>;
+}
+
+export default function AchievementsSection() {
+  const { counters, highlight } = portfolioData.achievements;
+  const sectionRef = useRef(null);
+  const [inView, setInView] = useState(false);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting && !animated.current) {
-          animated.current = true;
-          const duration = 1500;
-          const increment = target / (duration / 16);
-          let current = 0;
-          const tick = () => {
-            current += increment;
-            if (current < target) {
-              setCount(Math.ceil(current));
-              requestAnimationFrame(tick);
-            } else {
-              setCount(target);
-            }
-          };
-          tick();
+        if (entry.isIntersecting) {
+          // Reset then trigger so it always animates on scroll-in
+          setInView(false);
+          requestAnimationFrame(() => {
+            requestAnimationFrame(() => setInView(true));
+          });
+        } else {
+          setInView(false); // reset when scrolled away so it re-animates
         }
       },
-      { threshold: 0.3 }
+      { threshold: 0.25 }
     );
-    if (ref.current) observer.observe(ref.current);
+    if (sectionRef.current) observer.observe(sectionRef.current);
     return () => observer.disconnect();
-  }, [target]);
+  }, []);
 
-  return <div ref={ref} className="counter-num">{count}</div>;
-}
+  const getIcon = (key) => {
+    switch (key) {
+      case "Code": return <Code size={28} />;
+      case "FolderGit2": return <FolderGit2 size={28} />;
+      case "GitCommit": return <GitCommit size={28} />;
+      case "Trophy": return <Trophy size={28} />;
+      default: return <Code size={28} />;
+    }
+  };
 
-export default function AchievementsSection() {
   return (
-    <section className="section achievements-section" id="achievements">
-      <div className="section-header">
-        <span className="section-tag">Milestones</span>
-        <h2 className="section-title">Achievements</h2>
-      </div>
-      <div className="achievements-grid" id="counters-box">
-        {counters.map(({ icon: Icon, target, label }) => (
-          <div className="counter-card glass-card" key={label}>
-            <div className="counter-icon"><Icon size={28} /></div>
-            <AnimatedCounter target={target} />
-            <span className="counter-plus">+</span>
-            <p>{label}</p>
-          </div>
-        ))}
-        <div className="counter-card glass-card full-width-counter">
-          <div className="counter-icon"><Award size={28} /></div>
-          <div className="top-placement-title">Top 8</div>
-          <p>IEEE Mega Project Finalist</p>
+    <section className="section achievements-section" id="achievements" ref={sectionRef}>
+      <ScrollReveal>
+        <div className="section-header">
+          <span className="section-tag">Milestones</span>
+          <h2 className="section-title">Achievements</h2>
         </div>
-      </div>
+        <div className="achievements-grid" id="counters-box">
+          {counters.map(({ iconKey, target, label }) => (
+            <div className="counter-card glass-card" key={label}>
+              <div className="counter-icon">{getIcon(iconKey)}</div>
+              <AnimatedCounter target={target} shouldAnimate={inView} />
+              <span className="counter-plus">+</span>
+              <p>{label}</p>
+            </div>
+          ))}
+          <div className="counter-card glass-card full-width-counter">
+            <div className="counter-icon"><Award size={28} /></div>
+            <div className="top-placement-title">{highlight.title}</div>
+            <p>{highlight.subtitle}</p>
+          </div>
+        </div>
+      </ScrollReveal>
     </section>
   );
 }

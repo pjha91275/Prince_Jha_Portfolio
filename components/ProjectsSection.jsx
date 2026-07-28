@@ -1,51 +1,45 @@
 "use client";
 import { GraduationCap, ShoppingBag, FileText, GitFork, ExternalLink, Check } from "lucide-react";
-
-const projects = [
-  {
-    icon: GraduationCap,
-    title: "SkillBridge",
-    type: "Placement Preparation Platform",
-    desc: "An intelligent web ecosystem designed to streamline placement prep for students.",
-    features: ["Resume Analysis", "Placement Readiness Score", "Skill Gap Analysis", "Roadmaps & DSA Tracker"],
-    tech: ["Python", "Flask", "Tailwind CSS", "Gemini API"],
-    github: "https://github.com/pjha91275/SkillBridge",
-    demo: "https://skillbridgehq.vercel.app",
-  },
-  {
-    icon: ShoppingBag,
-    title: "Quickzy",
-    type: "Quick Commerce Platform",
-    desc: "High-performance quick-commerce web app built for rapid ordering and item delivery.",
-    features: ["Secure Authentication", "Cart & Wishlist System", "Razorpay Payment Gateway", "Admin Product Dashboard"],
-    tech: ["HTML5", "CSS3", "Vanilla JS", "NodeJS"],
-    github: "https://github.com/pjha91275/Quickzy",
-    demo: "https://quickzy-zap.vercel.app",
-  },
-  {
-    icon: FileText,
-    title: "Blog Management System",
-    type: "Full Stack Blog Platform",
-    desc: "A full stack content platform allowing developers to read, write, and render blogs.",
-    features: ["JWT Secure Authentication", "Full Blog CRUD Actions", "Express Backend", "Markdown Blog Rendering"],
-    tech: ["Express", "MongoDB", "NodeJS", "Bootstrap"],
-    github: "https://github.com/pjha91275/Blog-Management-System",
-    demo: "https://blog-management-system-kns5.onrender.com",
-  },
-];
+import { portfolioData } from "@/lib/portfolioData";
+import ScrollReveal from "./ScrollReveal";
 
 export default function ProjectsSection() {
+  const { projects } = portfolioData;
+
+  // Helper to map icon keys to Lucide icons
+  const getIcon = (key) => {
+    switch (key) {
+      case "GraduationCap": return <GraduationCap size={24} />;
+      case "ShoppingBag": return <ShoppingBag size={24} />;
+      case "FileText": return <FileText size={24} />;
+      default: return <GraduationCap size={24} />;
+    }
+  };
+
   return (
     <section className="section projects-section" id="projects">
-      <div className="section-header">
-        <span className="section-tag">My Work</span>
-        <h2 className="section-title">Featured Projects</h2>
-      </div>
-      <div className="projects-grid">
-        {projects.map(({ icon: Icon, title, type, desc, features, tech, github, demo }) => (
+      <ScrollReveal>
+        <div className="section-header">
+          <span className="section-tag">My Work</span>
+          <h2 className="section-title">Featured Projects</h2>
+        </div>
+        <div className="projects-grid">
+        {projects.map(({ iconKey, title, type, desc, features, tech, github, demo, image }) => (
           <div className="project-card glass-card" key={title}>
             <div className="project-banner">
-              <Icon size={40} />
+              <img 
+                src={image} 
+                alt={title} 
+                className="project-thumbnail" 
+                onError={(e) => {
+                  e.currentTarget.style.opacity = '0';
+                }}
+              />
+              <div className="project-banner-overlay">
+                <span className="overlay-icon-box">
+                  {getIcon(iconKey)}
+                </span>
+              </div>
             </div>
             <div className="project-content">
               <h3>{title}</h3>
@@ -79,6 +73,7 @@ export default function ProjectsSection() {
           </div>
         ))}
       </div>
+      </ScrollReveal>
     </section>
   );
 }
