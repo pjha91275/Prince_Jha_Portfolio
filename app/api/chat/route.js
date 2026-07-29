@@ -29,10 +29,10 @@ Here is Prince Jha's detailed profile:
   - Top 8 Finalist at IEEE Mega Project competition.
 - Contact:
   - Email: pjha91275@gmail.com
-  - Phone: +91 98765 43210
+  - Phone: +91 83569 28772
   - LinkedIn: linkedin.com/in/prince-jha-dev
   - GitHub: github.com/pjha91275/
-  - Portfolio: princejha.me
+  - Portfolio: https://princejha.vercel.appp
 
 Guidelines:
 1. Keep responses concise, accurate, and relevant. Format in friendly, professional Markdown.
@@ -74,7 +74,7 @@ function localPortfolioResponse(msg) {
     return "Prince Jha's achievements:\n\n- **100+** DSA problems solved\n- **30+** GitHub repos, **550+** commits\n- **10+** hackathons participated\n- **Top 8 Finalist** at IEEE Mega Project";
 
   if (/\b(contact|email|phone|linkedin|github|reach)\b/.test(m))
-    return "Reach Prince Jha:\n\n- 📧 **pjha91275@gmail.com**\n- 📞 **+91 98765 43210**\n- 🐙 [github.com/pjha91275](https://github.com/pjha91275/)\n- 💼 [linkedin.com/in/prince-jha-dev](https://linkedin.com/in/prince-jha-dev)";
+    return "Reach Prince Jha:\n\n- 📧 **pjha91275@gmail.com**\n- 📞 **+91 83569 28772**\n- 🐙 [github.com/pjha91275](https://github.com/pjha91275/)\n- 💼 [linkedin.com/in/prince-jha-dev](https://linkedin.com/in/prince-jha-dev)";
 
   return "🤖 *Local Fallback Mode Active*\n\nI can answer questions about Prince's **skills**, **education**, **projects**, **achievements**, and **contact details**. Try asking: *'What is SkillBridge?'*";
 }

@@ -10,9 +10,26 @@ const NAV_SECTIONS = [
   { id: "contact",     label: "Contact" },
 ];
 
+import { Sun, Moon } from "lucide-react";
+
 export default function Header({ backendStatus }) {
   const { connected } = backendStatus;
   const [activeSection, setActiveSection] = useState("");
+  const [theme, setTheme] = useState("dark");
+
+  useEffect(() => {
+    // Load theme from localStorage on client side mount
+    const savedTheme = localStorage.getItem("theme") || "dark";
+    setTheme(savedTheme);
+    document.documentElement.setAttribute("data-theme", savedTheme);
+  }, []);
+
+  const toggleTheme = () => {
+    const newTheme = theme === "dark" ? "light" : "dark";
+    setTheme(newTheme);
+    document.documentElement.setAttribute("data-theme", newTheme);
+    localStorage.setItem("theme", newTheme);
+  };
 
   useEffect(() => {
     // Build a map of id → entry so we always pick the one highest in viewport
@@ -71,6 +88,14 @@ export default function Header({ backendStatus }) {
         ))}
       </nav>
       <div className="header-actions">
+        <button
+          className="theme-toggle-btn"
+          onClick={toggleTheme}
+          aria-label="Toggle Theme"
+          title={theme === "dark" ? "Switch to Light Mode" : "Switch to Dark Mode"}
+        >
+          {theme === "dark" ? <Sun size={18} /> : <Moon size={18} />}
+        </button>
         <div className={`backend-badge${connected ? " connected" : ""}`} id="backend-status-badge">
           <span className="badge-dot" />
           <span id="backend-status-text">{connected ? "Backend Active" : "Offline Fallback"}</span>

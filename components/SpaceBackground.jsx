@@ -403,6 +403,7 @@ export default function SpaceBackground() {
   return (
     <canvas
       ref={canvasRef}
+      className="space-canvas"
       style={{
         position: "fixed",
         top: 0,

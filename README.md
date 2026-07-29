@@ -6,6 +6,7 @@ An AI-powered full-stack portfolio built with **React.js 19**, **Next.js 16**, *
 
 ## ✨ Features
 
+- **🌓 Stateful Theme Switcher**: Interactive light/dark mode switch button in the header navigation with seamless transition effects and theme state persistence via `localStorage`.
 - **🤖 Embedded AI Chatbot**: A floating chatbot widget powered by **Google Gemini API** (`gemini-2.0-flash` model) with streaming-style responses, Markdown rendering support (bold, code blocks, inline code, links, lists), persistent chat history, and a configurable system context about Prince Jha for intelligent, portfolio-aware answers.
 - **🌌 Immersive Space Background**: A full-viewport HTML5 Canvas animation engine rendering a live starfield (130+ twinkling stars), orbiting planets with shadow rings, a spiraling galaxy cluster, a pulsating black hole with a gravitational lensing glow, and animated nebula-style space clouds — all running at 60fps via `requestAnimationFrame`.
 - **🎬 Scroll-Reveal Section Animations**: Custom `ScrollReveal` component using the `IntersectionObserver` API to trigger space-storm-inspired entrance animations — sections materialize with spiraling, converging motion as they enter the viewport and reset on scroll-away for repeatability.
