@@ -53,7 +53,7 @@ function sourceBadge(source) {
 function clientFallback(msg) {
   const q = msg.toLowerCase();
   if (q.includes("project") || q.includes("work"))
-    return "Prince Jha has built:\n\n- **Quickzy** – Full-stack quick commerce platform with Leaflet geolocation, Razorpay & admin dashboard.\n- **SkillBridge** – Placement preparation platform with 100-point readiness score & ATS resume analysis.\n- **StudentSetu** – Student Development Passport platform with 5-role RBAC, PostgreSQL/Prisma & institutional analytics.";
+    return "Prince Jha has built:\n\n- **Quickzy** – Full-stack quick commerce platform with Leaflet geolocation, Razorpay & admin dashboard.\n- **SkillBridge** – Placement preparation platform with 100-point readiness score & ATS resume analysis.\n- **StudentSetu** – Student Development Passport platform with 5-role RBAC, PostgreSQL/Prisma & institutional analytics.\n- **InvestEase AI** – Financial wellness & micro-investment platform with auto-sweeps, portfolio simulator & Gemini AI spending coach.";
   if (q.includes("skill") || q.includes("language") || q.includes("technolog"))
     return "Prince's skills:\n- **Languages:** C++, Java, JavaScript, TypeScript, Python, C\n- **Frontend:** React.js, Next.js, Redux Toolkit, HTML, CSS, Tailwind CSS, Bootstrap\n- **Backend:** Node.js, Express.js, RESTful APIs, EJS\n- **Databases:** MongoDB, PostgreSQL, MySQL, Mongoose\n- **Tools:** Linux (Ubuntu), Git, GitHub, Postman, MongoDB Atlas, Vercel, Render, VS Code";
   if (q.includes("educat") || q.includes("tcet") || q.includes("cgpi") || q.includes("college"))
@@ -62,7 +62,7 @@ function clientFallback(msg) {
     return "Reach Prince:\n- 📧 **pjha91275@gmail.com**\n- 📞 **+91-8356928772**\n- 💼 [LinkedIn](https://linkedin.com/in/prince-jha-dev)\n- 🐙 [GitHub](https://github.com/pjha91275)\n- 🌐 [Portfolio](https://princejha.vercel.app)";
   if (q.includes("achievement") || q.includes("hackathon") || q.includes("dsa") || q.includes("contest"))
     return "Prince's achievements:\n- **120+** DSA problems solved\n- **40+** GitHub repos, **700+** commits\n- **15+** national hackathons participated (Top 8 Finalist at IEEE Mega Project 8.0)\n- **3rd Rank** in Code Contest by Enginow";
-  return "👋 I'm Prince's AI Assistant (Offline Mode).\n\nAsk me about his **skills**, **projects** (Quickzy, SkillBridge, StudentSetu), **education**, **achievements**, or **contact** info.";
+  return "👋 I'm Prince's AI Assistant (Offline Mode).\n\nAsk me about his **skills**, **projects** (Quickzy, SkillBridge, StudentSetu, InvestEase AI), **education**, **achievements**, or **contact** info.";
 }
 
 export default function ChatbotWidget({ backendStatus }) {

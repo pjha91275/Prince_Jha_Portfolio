@@ -25,6 +25,7 @@ Here is Prince Jha's detailed profile:
   1. Quickzy: Full-Stack Quick Commerce Platform built with Next.js, React.js, JavaScript, Tailwind CSS, Node.js, MongoDB, Mongoose, NextAuth.js, Razorpay, Leaflet + LocationIQ address pinning, and a 6-module role-based admin dashboard.
   2. SkillBridge: Placement Preparation Platform built with Next.js, React.js, JavaScript, Tailwind CSS, Node.js, MongoDB, Mongoose, NextAuth.js, featuring a 100-point readiness scoring engine, ATS resume analysis, 10 technical role skill-gap assessments, a 19-topic DSA tracker, and Recharts analytics.
   3. StudentSetu: Student Development Passport Platform built with Next.js, React.js, TypeScript, Tailwind CSS, Node.js, PostgreSQL, Prisma, NextAuth.js, featuring 5-role RBAC, an 18-model relational schema, individual project contribution tracking, and institutional analytics.
+  4. InvestEase AI: Financial Wellness & Virtual Micro-Investment Platform built with Next.js, React.js, TypeScript, Tailwind CSS, MongoDB, Mongoose, NextAuth.js, and Google Gemini API — featuring automated spare-change sweeps, a 5-asset portfolio simulator with volatility market drift, in-browser Tesseract.js OCR receipt scanning, and an AI spending coach.
 - Activities & Achievements:
   - 120+ DSA problems solved across LeetCode, CodeChef, GeeksforGeeks, and CodeStudio.
   - 40+ GitHub repositories with 700+ commits.
@@ -62,7 +63,10 @@ function localPortfolioResponse(msg) {
     return "Prince Jha's technical skillset:\n\n- **Languages:** C++, Java, JavaScript, TypeScript, Python, C\n- **Frontend:** React.js, Next.js, Redux Toolkit, HTML, CSS, Tailwind CSS, Bootstrap\n- **Backend:** Node.js, Express.js, RESTful APIs, EJS\n- **Databases:** MongoDB, PostgreSQL, MySQL, Mongoose\n- **Tools:** Linux (Ubuntu), Git, GitHub, Postman, MongoDB Atlas, MongoDB Compass, Vercel, Render, VS Code, Antigravity IDE\n- **CS Fundamentals:** OOP, Data Structures & Algorithms, DBMS, OS, Computer Networks\n- **Data Science:** NumPy";
 
   if (/\b(projects|work|build|develop)\b/.test(m))
-    return "Prince has built:\n\n- **Quickzy** — Full-stack quick commerce platform with Leaflet geolocation, Razorpay payments, & role-based admin dashboard\n- **SkillBridge** — Placement preparation platform with 100-point readiness engine, ATS resume analysis & 19-topic DSA tracker\n- **StudentSetu** — Student Development Passport platform with 5-role RBAC, 18-model PostgreSQL/Prisma schema & institutional analytics\n\nAsk me about a specific project for details!";
+    return "Prince has built:\n\n- **Quickzy** — Full-stack quick commerce platform with Leaflet geolocation & Razorpay payments\n- **SkillBridge** — Placement preparation platform with 100-point readiness engine & ATS resume analysis\n- **StudentSetu** — Student Development Passport platform with 5-role RBAC & institutional analytics\n- **InvestEase AI** — Financial wellness & micro-investment platform with auto-sweeps, portfolio simulator & Gemini AI spending coach\n\nAsk me about a specific project for details!";
+
+  if (/\b(investease|invest ease|finance|investment|micro-invest)\b/.test(m))
+    return "💰 **InvestEase AI** is a Financial Wellness & Micro-Investment Platform:\n- Automatic spare-change sweeps on transactions (e.g. ₹0.35 saved on ₹421.65)\n- Real-time 5-asset portfolio simulator (Index, Mutual Funds, Stocks, Gold, Crypto) with market drift\n- In-browser Tesseract.js client-side OCR receipt scanner\n- Google Gemini AI Spending Coach & Financial Health Scoring Engine (0-100)\n\nLive Demo: [investease-ai.vercel.app](https://investease-ai.vercel.app/) | Code: [GitHub](https://github.com/pjha91275/InvestEase-AI)";
 
   if (/\b(quickzy|quick commerce)\b/.test(m))
     return "🛒 **Quickzy** is a Full-Stack Quick Commerce Platform:\n- Passwordless email auth with NextAuth.js & Brevo\n- Leaflet + LocationIQ geolocation address pinning\n- Persistent cart, wishlist, and Razorpay payment gateway\n- 6-module role-based admin dashboard with Next.js Server Actions & MongoDB";
@@ -79,7 +83,7 @@ function localPortfolioResponse(msg) {
   if (/\b(contact|email|phone|linkedin|github|reach)\b/.test(m))
     return "Reach Prince Jha:\n\n- 📧 **pjha91275@gmail.com**\n- 📞 **+91-8356928772**\n- 🐙 [github.com/pjha91275](https://github.com/pjha91275)\n- 💼 [linkedin.com/in/prince-jha-dev](https://linkedin.com/in/prince-jha-dev)\n- 🌐 [princejha.vercel.app](https://princejha.vercel.app)";
 
-  return "🤖 *Local Fallback Mode Active*\n\nI can answer questions about Prince's **skills**, **education**, **projects** (Quickzy, SkillBridge, StudentSetu), **achievements**, and **contact details**. Try asking: *'Tell me about StudentSetu'*.";
+  return "🤖 *Local Fallback Mode Active*\n\nI can answer questions about Prince's **skills**, **education**, **projects** (Quickzy, SkillBridge, StudentSetu, InvestEase AI), **achievements**, and **contact details**. Try asking: *'Tell me about InvestEase AI'*.";
 }
 
 // ─── API Key Helper ───────────────────────────────────────────────────────────

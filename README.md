@@ -16,8 +16,7 @@ An AI-powered full-stack portfolio built with **React.js 19**, **Next.js 16**, *
 - **🏷️ Floating Capability Badges**: Animated orbiting tags (`Full Stack Development`, `DSA`, `Technology`, `Software Engineering`) with per-badge color themes, pulsating glow dots, Lucide vector icons, and independent floating keyframe animations surrounding the profile photo.
 - **🔵 Orbital Ring System**: Three concentric dashed orbital rings with sparkle nodes spin at different speeds around the hero profile image — replicating a planetary orbit system aesthetic.
 - **🛠️ Skills Grid with Devicons**: A categorized skill matrix rendering official technology logos sourced from the **Devicons CDN** alongside chip labels, organized across Languages (C++, Java, JS, TypeScript, Python), Frontend (React, Next.js, Redux Toolkit, Tailwind), Backend (Node.js, Express, RESTful APIs), Databases (MongoDB, PostgreSQL, MySQL), Tools, CS Fundamentals, and Data Science.
-- **🎓 Education Timeline**: A clean vertical timeline card layout showcasing academic milestones with institution names, degree fields, durations, and GPA/percentage scores (BE Computer Engineering at TCET Mumbai University 3rd Year 2024–2028, HSC 2024, SSC 2022).
-- **📁 Projects Showcase**: Card-based project gallery with full-image thumbnails, feature chip lists, technology stacks, GitHub and live demo links — showcasing **Quickzy** (Quick Commerce Platform), **SkillBridge** (Placement Preparation Platform), and **StudentSetu** (Student Development Passport Platform).
+- **📁 Projects Showcase**: Card-based project gallery with full-image thumbnails, feature chip lists, technology stacks, GitHub and live demo links — showcasing **Quickzy** (Quick Commerce Platform), **SkillBridge** (Placement Preparation Platform), **StudentSetu** (Student Development Passport Platform), and **InvestEase AI** (Financial Wellness & Micro-Investment Platform), followed by a direct gateway to explore all 40+ repositories on GitHub.
 - **🏆 Achievements Highlight**: Counter stats grid alongside featured highlights (Top 8 IEEE Mega Project 8.0 Finalist, 3rd Rank in Enginow Code Contest, Odoo × SPIT, Mumbai Hacks, InnovaHack, and Flipkart GRID 8.0 Round 2).
 - **📡 Backend Status Indicator**: Live backend health check via `/api/status` shown in the navigation bar — green badge when MongoDB and Gemini API are connected, offline fallback status otherwise.
 - **📱 Fully Responsive**: Adaptive layout system with CSS Grid and Flexbox breakpoints covering desktop, tablet, and mobile viewports.
@@ -113,7 +112,7 @@ Prince-Jha-Portfolio/
 │
 ├── public/assets/                    # Static Assets
 │   ├── profile.jpg                   # Hero profile photograph
-│   ├── projects/                     # Project thumbnail images (Quickzy, SkillBridge, StudentSetu)
+│   ├── projects/                     # Project thumbnail images (Quickzy, SkillBridge, StudentSetu, InvestEase)
 │   ├── resume/                       # Official PDF resume (Prince_Jha_Resume.pdf)
 │   └── skills/                       # Custom skill logos (Mongoose, EJS, OS, Networks etc.)
 │
