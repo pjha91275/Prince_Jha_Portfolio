@@ -10,15 +10,15 @@ An AI-powered full-stack portfolio built with **React.js 19**, **Next.js 16**, *
 - **🤖 Embedded AI Chatbot**: A floating chatbot widget powered by **Google Gemini API** (`gemini-2.0-flash` model) with streaming-style responses, Markdown rendering support (bold, code blocks, inline code, links, lists), persistent chat history, and a configurable system context about Prince Jha for intelligent, portfolio-aware answers.
 - **🌌 Immersive Space Background**: A full-viewport HTML5 Canvas animation engine rendering a live starfield (130+ twinkling stars), orbiting planets with shadow rings, a spiraling galaxy cluster, a pulsating black hole with a gravitational lensing glow, and animated nebula-style space clouds — all running at 60fps via `requestAnimationFrame`.
 - **🎬 Scroll-Reveal Section Animations**: Custom `ScrollReveal` component using the `IntersectionObserver` API to trigger space-storm-inspired entrance animations — sections materialize with spiraling, converging motion as they enter the viewport and reset on scroll-away for repeatability.
-- **📊 Animated Achievement Counters**: Milestone statistics (DSA Problems, GitHub Commits, Repositories, Hackathons) count up from 0 to their target values with a smooth ease-out cubic animation triggered precisely when the Achievements section enters the viewport.
+- **📊 Animated Achievement Counters**: Milestone statistics (120+ DSA Problems, 700+ GitHub Commits, 40+ Repositories, 15+ Hackathons) count up from 0 to their target values with a smooth ease-out cubic animation triggered precisely when the Achievements section enters the viewport.
 - **📬 Live Contact Form**: A fully functional contact form backed by a **Next.js serverless API route**, **MongoDB** (via **Mongoose ODM**), and cached connection pooling — stores every submitted message persistently in the database with timestamp and metadata.
 - **💻 VS Code Code Mockup**: An interactive Python code editor replica in the About section displaying a live representation of Prince's skill stack and profile as a `class`, complete with syntax highlighting, line numbers, dot controls, and a tab bar — styled identically to VS Code dark theme.
 - **🏷️ Floating Capability Badges**: Animated orbiting tags (`Full Stack Development`, `DSA`, `Technology`, `Software Engineering`) with per-badge color themes, pulsating glow dots, Lucide vector icons, and independent floating keyframe animations surrounding the profile photo.
 - **🔵 Orbital Ring System**: Three concentric dashed orbital rings with sparkle nodes spin at different speeds around the hero profile image — replicating a planetary orbit system aesthetic.
-- **🛠️ Skills Grid with Devicons**: A categorized skill matrix rendering official technology logos sourced from the **Devicons CDN** alongside chip labels, organized across Languages, Frontend, Backend, Databases, Tools, CS Fundamentals, and Data Science.
-- **🎓 Education Timeline**: A clean vertical timeline card layout showcasing academic milestones with institution names, degree fields, durations, and GPA/percentage scores.
-- **📁 Projects Showcase**: Card-based project gallery with full-image thumbnails, feature chip lists, technology stacks, GitHub and live demo links — driven entirely from the central data file.
-- **🏆 Achievements Highlight**: Counter stats grid alongside a featured hackathon highlight card (Top 8 IEEE Mega Project Finalist).
+- **🛠️ Skills Grid with Devicons**: A categorized skill matrix rendering official technology logos sourced from the **Devicons CDN** alongside chip labels, organized across Languages (C++, Java, JS, TypeScript, Python), Frontend (React, Next.js, Redux Toolkit, Tailwind), Backend (Node.js, Express, RESTful APIs), Databases (MongoDB, PostgreSQL, MySQL), Tools, CS Fundamentals, and Data Science.
+- **🎓 Education Timeline**: A clean vertical timeline card layout showcasing academic milestones with institution names, degree fields, durations, and GPA/percentage scores (BE Computer Engineering at TCET Mumbai University 3rd Year 2024–2028, HSC 2024, SSC 2022).
+- **📁 Projects Showcase**: Card-based project gallery with full-image thumbnails, feature chip lists, technology stacks, GitHub and live demo links — showcasing **Quickzy** (Quick Commerce Platform), **SkillBridge** (Placement Preparation Platform), and **StudentSetu** (Student Development Passport Platform).
+- **🏆 Achievements Highlight**: Counter stats grid alongside featured highlights (Top 8 IEEE Mega Project 8.0 Finalist, 3rd Rank in Enginow Code Contest, Odoo × SPIT, Mumbai Hacks, InnovaHack, and Flipkart GRID 8.0 Round 2).
 - **📡 Backend Status Indicator**: Live backend health check via `/api/status` shown in the navigation bar — green badge when MongoDB and Gemini API are connected, offline fallback status otherwise.
 - **📱 Fully Responsive**: Adaptive layout system with CSS Grid and Flexbox breakpoints covering desktop, tablet, and mobile viewports.
 - **⚡ Optimized Performance**: GPU-accelerated CSS transforms, `will-change` hints, lazy canvas rendering, and IntersectionObserver-based selective animation triggering — designed to run smooth on all devices without layout jank.
@@ -113,7 +113,8 @@ Prince-Jha-Portfolio/
 │
 ├── public/assets/                    # Static Assets
 │   ├── profile.jpg                   # Hero profile photograph
-│   ├── projects/                     # Project thumbnail images
+│   ├── projects/                     # Project thumbnail images (Quickzy, SkillBridge, StudentSetu)
+│   ├── resume/                       # Official PDF resume (Prince_Jha_Resume.pdf)
 │   └── skills/                       # Custom skill logos (Mongoose, EJS, OS, Networks etc.)
 │
 ├── .env.example                      # Environment variable template
@@ -229,6 +230,7 @@ Update personal info, bio, education, skills, projects, and achievements here �
 - 🌐 Portfolio: [princejha.vercel.app](https://princejha.vercel.app)
 - 💼 GitHub: [@pjha91275](https://github.com/pjha91275)
 - 🔗 LinkedIn: [prince-jha-dev](https://linkedin.com/in/prince-jha-dev)
+- 📸 Instagram: [prince_jha_dev](https://www.instagram.com/prince_jha_dev)
 - 📧 Email: pjha91275@gmail.com
 
 ---

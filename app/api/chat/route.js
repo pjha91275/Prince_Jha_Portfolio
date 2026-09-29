@@ -8,31 +8,34 @@ Your objective is to answer questions about Prince, his projects, skills, educat
 Here is Prince Jha's detailed profile:
 - Name: Prince Jha
 - Role: 3rd Year Computer Engineering Student & Full Stack Web Developer
-- Education: Bachelor of Engineering (Computer Engineering) at Thakur College of Engineering and Technology (TCET), Mumbai. CGPI: 9.25. HSC: 78.83%. SSC: 78.80%.
+- Education: 
+  - Bachelor of Engineering (Computer Engineering) at Thakur College of Engineering and Technology, Mumbai University. 3rd Year (2024–2028). CGPI: 9.25.
+  - XII (HSC) — Thakur College of Science & Commerce, Maharashtra State Board (2024): 78.83%.
+  - X (SSC) — Himalaya High School, Maharashtra State Board (2022): 78.80%.
 - Career Goal: To work as a Software Engineer at a top-tier product-based tech company, engineering scalable software and intelligent applications.
 - Skills:
-  - Programming Languages: C++, Java, JavaScript, Python, C
-  - Frontend: React.js, Next.js, HTML, CSS, Tailwind CSS, Bootstrap
-  - Backend: Node.js, Express.js, REST APIs, EJS
-  - Databases: MongoDB, MySQL, Mongoose
+  - Programming Languages: C++, Java, JavaScript, TypeScript, Python, C
+  - Frontend: React.js, Next.js, Redux Toolkit, HTML, CSS, Tailwind CSS, Bootstrap
+  - Backend: Node.js, Express.js, RESTful APIs, EJS
+  - Databases: MongoDB, PostgreSQL, MySQL, Mongoose
   - Tools & Platforms: Linux (Ubuntu), Git, GitHub, Postman, MongoDB Atlas, MongoDB Compass, Vercel, Render, VS Code, Antigravity IDE
-  - CS Fundamentals: Object-Oriented Programming (OOP), DSA, DBMS, Operating Systems, Computer Networks
+  - CS Fundamentals: Object-Oriented Programming (OOP), Data Structures & Algorithms (DSA), DBMS, Operating Systems, Computer Networks
   - Data Science Library: NumPy
 - Featured Projects:
-  1. SkillBridge: Placement preparation dashboard with resume parsing/analysis, readiness scoring, skill gap analysis, learning roadmaps, and DSA trackers.
-  2. Quickzy: Quick Commerce storefront with secure auth, shopping cart, wishlist, Razorpay API, and admin dashboards.
-  3. Blog Management System: Full stack blog with JWT auth, CRUD, Node/Express backend, MongoDB, and Markdown rendering.
-- Achievements:
-  - 100+ DSA problems solved.
-  - 30+ GitHub repositories, 550+ commits.
-  - 10+ hackathons participated.
-  - Top 8 Finalist at IEEE Mega Project competition.
+  1. Quickzy: Full-Stack Quick Commerce Platform built with Next.js, React.js, JavaScript, Tailwind CSS, Node.js, MongoDB, Mongoose, NextAuth.js, Razorpay, Leaflet + LocationIQ address pinning, and a 6-module role-based admin dashboard.
+  2. SkillBridge: Placement Preparation Platform built with Next.js, React.js, JavaScript, Tailwind CSS, Node.js, MongoDB, Mongoose, NextAuth.js, featuring a 100-point readiness scoring engine, ATS resume analysis, 10 technical role skill-gap assessments, a 19-topic DSA tracker, and Recharts analytics.
+  3. StudentSetu: Student Development Passport Platform built with Next.js, React.js, TypeScript, Tailwind CSS, Node.js, PostgreSQL, Prisma, NextAuth.js, featuring 5-role RBAC, an 18-model relational schema, individual project contribution tracking, and institutional analytics.
+- Activities & Achievements:
+  - 120+ DSA problems solved across LeetCode, CodeChef, GeeksforGeeks, and CodeStudio.
+  - 40+ GitHub repositories with 700+ commits.
+  - 15+ national-level hackathons participated. Advanced to finals in Odoo × SPIT Hackathon, Mumbai Hacks, IEEE Mega Project 8.0 (Top 8 Finalists), and InnovaHack Chapter 1 2026. Round 2 in Flipkart GRID 8.0.
+  - 3rd Rank in Code Contest (competitive programming contest organized by Enginow).
 - Contact:
   - Email: pjha91275@gmail.com
-  - Phone: +91 83569 28772
+  - Phone: +91-8356928772
   - LinkedIn: linkedin.com/in/prince-jha-dev
-  - GitHub: github.com/pjha91275/
-  - Portfolio: https://princejha.vercel.appp
+  - GitHub: github.com/pjha91275
+  - Portfolio: https://princejha.vercel.app
 
 Guidelines:
 1. Keep responses concise, accurate, and relevant. Format in friendly, professional Markdown.
@@ -50,33 +53,33 @@ function localPortfolioResponse(msg) {
     return "This portfolio showcases Prince Jha's projects, skills, and achievements, featuring an AI assistant powered by Google Gemini API.";
 
   if (/\b(prince|about|who is|profile)\b/.test(m))
-    return "**Prince Jha** is a 3rd Year Computer Engineering student at TCET, Mumbai. He is a Full Stack Web Developer and AI enthusiast aiming to work as a Software Engineer at a top-tier product-based company.";
+    return "**Prince Jha** is a 3rd Year Computer Engineering student at Thakur College of Engineering and Technology (TCET), Mumbai University (CGPI: 9.25). He is a Full Stack Web Developer proficient in Next.js, TypeScript, Node.js, PostgreSQL, and MongoDB, aiming to work as a Software Engineer at a top-tier product-based company.";
 
   if (/\b(education|study|college|tcet|cgpi|hsc|ssc)\b/.test(m))
-    return "Prince Jha's academics:\n\n- **BE Computer Engineering** at TCET, Mumbai — CGPI: **9.25**\n- **HSC** — Maharashtra State Board | **78.83%**\n- **SSC** — Maharashtra State Board | **78.80%**";
+    return "Prince Jha's academics:\n\n- **BE Computer Engineering (3rd Year, 2024–2028)** at TCET, Mumbai University — CGPI: **9.25**\n- **XII (HSC, 2024)** — Thakur College of Science & Commerce | **78.83%**\n- **X (SSC, 2022)** — Himalaya High School | **78.80%**";
 
   if (/\b(skills|languages|technologies|frontend|backend|database|tools)\b/.test(m))
-    return "Prince Jha's technical skillset:\n\n- **Languages:** C++, Java, JavaScript, Python, C\n- **Frontend:** React.js, Next.js, HTML, CSS, Tailwind CSS, Bootstrap\n- **Backend:** Node.js, Express.js, REST APIs, EJS\n- **Databases:** MongoDB, MySQL, Mongoose\n- **Tools:** Linux, Git, GitHub, Postman, MongoDB Atlas, Vercel, Render, VS Code\n- **CS Fundamentals:** OOP, DSA, DBMS, OS, CN\n- **Data Science:** NumPy";
+    return "Prince Jha's technical skillset:\n\n- **Languages:** C++, Java, JavaScript, TypeScript, Python, C\n- **Frontend:** React.js, Next.js, Redux Toolkit, HTML, CSS, Tailwind CSS, Bootstrap\n- **Backend:** Node.js, Express.js, RESTful APIs, EJS\n- **Databases:** MongoDB, PostgreSQL, MySQL, Mongoose\n- **Tools:** Linux (Ubuntu), Git, GitHub, Postman, MongoDB Atlas, MongoDB Compass, Vercel, Render, VS Code, Antigravity IDE\n- **CS Fundamentals:** OOP, Data Structures & Algorithms, DBMS, OS, Computer Networks\n- **Data Science:** NumPy";
 
   if (/\b(projects|work|build|develop)\b/.test(m))
-    return "Prince has built:\n\n- **SkillBridge** — Placement prep with AI resume analysis & DSA tracker\n- **Quickzy** — Quick-commerce app with Razorpay payments\n- **Blog Management System** — Full stack blog with JWT auth & MongoDB\n\nAsk me about a specific project for details!";
-
-  if (/\b(skillbridge|placement prep)\b/.test(m))
-    return "🚀 **SkillBridge** is a Placement Preparation Platform:\n- AI Resume Analysis & Readiness Score\n- Skill Gap Analysis & learning roadmaps\n- DSA tracker & resume sync";
+    return "Prince has built:\n\n- **Quickzy** — Full-stack quick commerce platform with Leaflet geolocation, Razorpay payments, & role-based admin dashboard\n- **SkillBridge** — Placement preparation platform with 100-point readiness engine, ATS resume analysis & 19-topic DSA tracker\n- **StudentSetu** — Student Development Passport platform with 5-role RBAC, 18-model PostgreSQL/Prisma schema & institutional analytics\n\nAsk me about a specific project for details!";
 
   if (/\b(quickzy|quick commerce)\b/.test(m))
-    return "🛒 **Quickzy** is a Quick Commerce Platform:\n- JWT authentication & sessions\n- Shopping cart & wishlist\n- Razorpay payment integration\n- Admin product dashboard";
+    return "🛒 **Quickzy** is a Full-Stack Quick Commerce Platform:\n- Passwordless email auth with NextAuth.js & Brevo\n- Leaflet + LocationIQ geolocation address pinning\n- Persistent cart, wishlist, and Razorpay payment gateway\n- 6-module role-based admin dashboard with Next.js Server Actions & MongoDB";
 
-  if (/\b(blog|blogging)\b/.test(m))
-    return "📝 **Blog Management System**:\n- JWT Secure Authentication\n- Full CRUD for blog articles\n- Node.js/Express backend with MongoDB\n- Markdown blog rendering";
+  if (/\b(skillbridge|placement prep)\b/.test(m))
+    return "🚀 **SkillBridge** is a Placement Preparation Platform:\n- 100-point readiness scoring engine & ATS resume analysis\n- Skill-gap assessment across 10 technical roles & learning roadmaps\n- 19-topic DSA tracker, Kanban goal tracking, and Recharts analytics";
 
-  if (/\b(achievements|dsa|hackathon|ieee)\b/.test(m))
-    return "Prince Jha's achievements:\n\n- **100+** DSA problems solved\n- **30+** GitHub repos, **550+** commits\n- **10+** hackathons participated\n- **Top 8 Finalist** at IEEE Mega Project";
+  if (/\b(studentsetu|student setu|passport)\b/.test(m))
+    return "🎓 **StudentSetu** is a Student Development Passport Platform:\n- Centralized, evidence-based verification workflows with 5-role RBAC\n- Individual project contribution tracking and demonstrated skills\n- 18-model relational schema with Prisma & PostgreSQL\n- Dynamic institutional analytics and print-ready NAAC/NBA reports";
+
+  if (/\b(achievements|dsa|hackathon|ieee|contest|competit)\b/.test(m))
+    return "Prince Jha's achievements:\n\n- **120+** DSA problems solved across LeetCode, CodeChef, GFG, and CodeStudio\n- **40+** GitHub repositories with **700+** commits\n- **15+** national hackathons participated (Top 8 Finalists at IEEE Mega Project 8.0, Finalist at Odoo × SPIT & Mumbai Hacks, Flipkart GRID 8.0 Round 2)\n- **3rd Rank** in Code Contest by Enginow";
 
   if (/\b(contact|email|phone|linkedin|github|reach)\b/.test(m))
-    return "Reach Prince Jha:\n\n- 📧 **pjha91275@gmail.com**\n- 📞 **+91 83569 28772**\n- 🐙 [github.com/pjha91275](https://github.com/pjha91275/)\n- 💼 [linkedin.com/in/prince-jha-dev](https://linkedin.com/in/prince-jha-dev)";
+    return "Reach Prince Jha:\n\n- 📧 **pjha91275@gmail.com**\n- 📞 **+91-8356928772**\n- 🐙 [github.com/pjha91275](https://github.com/pjha91275)\n- 💼 [linkedin.com/in/prince-jha-dev](https://linkedin.com/in/prince-jha-dev)\n- 🌐 [princejha.vercel.app](https://princejha.vercel.app)";
 
-  return "🤖 *Local Fallback Mode Active*\n\nI can answer questions about Prince's **skills**, **education**, **projects**, **achievements**, and **contact details**. Try asking: *'What is SkillBridge?'*";
+  return "🤖 *Local Fallback Mode Active*\n\nI can answer questions about Prince's **skills**, **education**, **projects** (Quickzy, SkillBridge, StudentSetu), **achievements**, and **contact details**. Try asking: *'Tell me about StudentSetu'*.";
 }
 
 // ─── API Key Helper ───────────────────────────────────────────────────────────

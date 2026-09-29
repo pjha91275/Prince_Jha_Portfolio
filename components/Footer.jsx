@@ -5,7 +5,7 @@ export default function Footer() {
     <footer className="portfolio-footer">
       <div className="footer-social-buttons">
         <a
-          href="https://princejha.vercel.appp"
+          href="https://princejha.vercel.app"
           target="_blank"
           rel="noopener noreferrer"
           className="footer-btn"

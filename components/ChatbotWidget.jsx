@@ -53,16 +53,16 @@ function sourceBadge(source) {
 function clientFallback(msg) {
   const q = msg.toLowerCase();
   if (q.includes("project") || q.includes("work"))
-    return "Prince Jha has built:\n\n- **SkillBridge** – Placement prep with AI resume analysis.\n- **Quickzy** – Quick commerce with Razorpay payments.\n- **Blog Management System** – Full stack blog with JWT & MongoDB.";
+    return "Prince Jha has built:\n\n- **Quickzy** – Full-stack quick commerce platform with Leaflet geolocation, Razorpay & admin dashboard.\n- **SkillBridge** – Placement preparation platform with 100-point readiness score & ATS resume analysis.\n- **StudentSetu** – Student Development Passport platform with 5-role RBAC, PostgreSQL/Prisma & institutional analytics.";
   if (q.includes("skill") || q.includes("language") || q.includes("technolog"))
-    return "Prince's skills:\n- **Frontend:** React.js, Next.js, HTML, CSS, Tailwind CSS, Bootstrap\n- **Backend:** Node.js, Express.js, REST APIs\n- **Database:** MongoDB, MySQL, Mongoose\n- **Languages:** C++, Java, JavaScript, Python, C";
-  if (q.includes("educat") || q.includes("tcet") || q.includes("cgpi"))
-    return "Prince is a 3rd-year **Computer Engineering** student at **TCET, Mumbai** with a CGPI of **9.25**.";
-  if (q.includes("contact") || q.includes("email"))
-    return "Reach Prince:\n- 📧 **pjha91275@gmail.com**\n- 💼 [LinkedIn](https://linkedin.com/in/prince-jha-dev)\n- 🐙 [GitHub](https://github.com/pjha91275/)";
-  if (q.includes("achievement") || q.includes("hackathon"))
-    return "Prince's achievements:\n- **100+** DSA problems\n- **30+** GitHub repos, **550+** commits\n- **10+** hackathons\n- **Top 8** at IEEE Mega Project";
-  return "👋 I'm Prince's AI Assistant (Offline Mode).\n\nAsk me about his **skills**, **projects**, **education**, **achievements**, or **contact** info.";
+    return "Prince's skills:\n- **Languages:** C++, Java, JavaScript, TypeScript, Python, C\n- **Frontend:** React.js, Next.js, Redux Toolkit, HTML, CSS, Tailwind CSS, Bootstrap\n- **Backend:** Node.js, Express.js, RESTful APIs, EJS\n- **Databases:** MongoDB, PostgreSQL, MySQL, Mongoose\n- **Tools:** Linux (Ubuntu), Git, GitHub, Postman, MongoDB Atlas, Vercel, Render, VS Code";
+  if (q.includes("educat") || q.includes("tcet") || q.includes("cgpi") || q.includes("college"))
+    return "Prince is a 3rd-year **Computer Engineering** student (2024–2028) at **TCET, Mumbai University** with a CGPI of **9.25** (HSC: 78.83%, SSC: 78.80%).";
+  if (q.includes("contact") || q.includes("email") || q.includes("phone"))
+    return "Reach Prince:\n- 📧 **pjha91275@gmail.com**\n- 📞 **+91-8356928772**\n- 💼 [LinkedIn](https://linkedin.com/in/prince-jha-dev)\n- 🐙 [GitHub](https://github.com/pjha91275)\n- 🌐 [Portfolio](https://princejha.vercel.app)";
+  if (q.includes("achievement") || q.includes("hackathon") || q.includes("dsa") || q.includes("contest"))
+    return "Prince's achievements:\n- **120+** DSA problems solved\n- **40+** GitHub repos, **700+** commits\n- **15+** national hackathons participated (Top 8 Finalist at IEEE Mega Project 8.0)\n- **3rd Rank** in Code Contest by Enginow";
+  return "👋 I'm Prince's AI Assistant (Offline Mode).\n\nAsk me about his **skills**, **projects** (Quickzy, SkillBridge, StudentSetu), **education**, **achievements**, or **contact** info.";
 }
 
 export default function ChatbotWidget({ backendStatus }) {

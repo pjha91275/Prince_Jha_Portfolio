@@ -51,7 +51,7 @@ export default function ContactSection({ backendConnected }) {
             </div>
             <div className="contact-item">
               <Globe size={20} className="contact-icon" />
-              <div><h4>Portfolio Website</h4><a href="https://princejha.vercel.appp" target="_blank" rel="noopener noreferrer">princejha.vercel.appp</a></div>
+              <div><h4>Portfolio Website</h4><a href="https://princejha.vercel.app" target="_blank" rel="noopener noreferrer">princejha.vercel.app</a></div>
             </div>
           </div>
           <div className="social-links">
